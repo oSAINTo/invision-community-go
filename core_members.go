@@ -50,8 +50,8 @@ type FieldGroups map[string]string
 
 // GetMember implements GET /core/members/{id} and returns a Member object
 // https://invisioncommunity.com/developers/rest-api?endpoint=core/members/GETitem
-func (client *Client) GetMember(id string) (member MemberGet, err error) {
-	_, err = client.http.R().SetResult(&member).Get("/api/core/members/" + id)
+func (client *Client) GetMember (member MemberGet, err error) {
+	_, err = client.http.R().SetResult(&member).Get("/api/core/members/")
 	if err != nil {
 		return
 	}
